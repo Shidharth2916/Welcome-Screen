@@ -1,33 +1,92 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    color: #fff;
+    animation: backgroundAnimation 10s ease-in-out infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #ff9966, #ff5e62);
+    }
+    50% {
+        background: linear-gradient(135deg, #66ccff, #ff9966);
+    }
+    100% {
+        background: linear-gradient(135deg, #ff9966, #ff5e62);
+    }
 }
 
 .container {
     text-align: center;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1 {
-    font-size: 2em;
-    color: #4b0082; /* Deep purple for vintage style */
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 p {
-    font-size: 1.2em;
-    color: #555;
+    font-size: 1.5em;
+    color: #ffebf2;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
 #date-time {
-    font-size: 1.5em;
-    margin: 20px 0;
-    color: #333;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #f0f8ff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+p.redirect-message {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #ffe4e9;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
