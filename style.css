@@ -13,72 +13,40 @@ body {
     align-items: center;
     height: 100vh;
     color: #fff;
-    animation: backgroundAnimation 10s ease-in-out infinite;
-}
-
-@keyframes backgroundAnimation {
-    0% {
-        background: linear-gradient(135deg, #ff9966, #ff5e62);
-    }
-    50% {
-        background: linear-gradient(135deg, #66ccff, #ff9966);
-    }
-    100% {
-        background: linear-gradient(135deg, #ff9966, #ff5e62);
-    }
 }
 
 .container {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 40px 60px;
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(10px);
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 h1 {
-    font-size: 3em;
-    font-weight: 600;
+    font-size: 2.5em;
+    font-weight: bold;
     margin-bottom: 20px;
     color: #fff;
-    letter-spacing: 1.5px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 p {
-    font-size: 1.5em;
-    color: #ffebf2;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
+    font-size: 1.3em;
+    margin-bottom: 20px;
 }
 
 #date-time {
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: bold;
-    color: #f0f8ff;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 p.redirect-message {
     font-size: 1.2em;
-    margin-top: 20px;
-    color: #ffe4e9;
     animation: blink 1.5s infinite;
 }
 
+/* Blinking effect for redirect message */
 @keyframes blink {
     0% {
         opacity: 1;
