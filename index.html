@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10;url=https://www.google.com">
+    <title>Shree Kamatchi Amman Traders</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function updateDateTime() {
+            const date = new Date();
+            const dateTimeString = date.toLocaleDateString() + " " + date.toLocaleTimeString();
+            document.getElementById('date-time').innerHTML = dateTimeString;
+        }
+
+        setInterval(updateDateTime, 1000);
+    </script>
+</head>
+<body onload="updateDateTime()">
+    <div class="container">
+        <h1>Welcome to Shree Kamatchi Amman Traders</h1>
+        <p id="date-time"></p>
+        <p>You will be redirected to Google in 10 seconds...</p>
+    </div>
+</body>
+</html>
